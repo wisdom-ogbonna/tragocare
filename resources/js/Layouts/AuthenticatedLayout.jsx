@@ -24,6 +24,41 @@ export default function Authenticated({ user, header, children }) {
                                 <NavLink href={route('dashboard')} active={route().current('dashboard')}>
                                     Dashboard
                                 </NavLink>
+
+                                <NavLink href={route('chirps.index')} active={route().current('chirps.index')}>
+                                    Billing
+                                </NavLink>
+                                <NavLink href="chirps.index" active={route().current('/caregivers')}>
+                                    Caregivers
+                                </NavLink>
+
+                                <NavLink href="/clients" active={route().current('/clients')}>
+                                    Clients
+                                </NavLink>
+
+                                <NavLink href="/schedule" active={route().current('/schedule')}>
+                                    Schedule
+                                </NavLink>
+
+                                <NavLink href="/evv" active={route().current('/evv')}>
+                                    EVV
+                                </NavLink>
+
+                                <NavLink href="/timesheets" active={route().current('/timesheets')}>
+                                    Timesheets
+                                </NavLink>
+
+                                <NavLink href="/text4care" active={route().current('/text4care')}>
+                                    Text4Care
+                                </NavLink>
+
+                                <NavLink href="/reports" active={route().current('/reports')}>
+                                    Reports
+                                </NavLink>
+
+
+
+
                             </div>
                         </div>
 
@@ -94,6 +129,23 @@ export default function Authenticated({ user, header, children }) {
                     <div className="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink href={route('dashboard')} active={route().current('dashboard')}>
                             Dashboard
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink href={route('chirps.index')} active={route().current('chirps.index')}>
+                            Billing
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink href={route('chirps.index')} active={route().current('chirps.index')}>
+                            Caregivers
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink href={route('chirps.index')} active={route().current('chirps.index')}>
+                            Clinents
+                        </ResponsiveNavLink>
+
+                        <ResponsiveNavLink href={route('chirps.index')} active={route().current('chirps.index')}>
+                            Schedule
+                        </ResponsiveNavLink>
+
+                        <ResponsiveNavLink href={route('chirps.index')} active={route().current('chirps.index')}>
+                            EVV
                         </ResponsiveNavLink>
                     </div>
 
