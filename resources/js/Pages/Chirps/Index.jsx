@@ -14,7 +14,7 @@ export default function Index({ auth, chirps }) {
         e.preventDefault();
         post(route('chirps.store'), { onSuccess: () => reset() });
     };
- 
+                
     return (
         <AuthenticatedLayout user={auth.user}>
             <Head title="Chirps" />
