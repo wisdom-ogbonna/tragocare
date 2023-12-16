@@ -26,14 +26,14 @@ export default function Authenticated({ user, header, children }) {
                                 </NavLink>
 
                                 <NavLink href={route('chirps.index')} active={route().current('chirps.index')}>
-                                    Billing
+                                    Clients
                                 </NavLink>
                                 <NavLink href="chirps.index" active={route().current('/caregivers')}>
                                     Caregivers
                                 </NavLink>
 
                                 <NavLink href="/clients" active={route().current('/clients')}>
-                                    Clients
+                                    Billing
                                 </NavLink>
 
                                 <NavLink href="/schedule" active={route().current('/schedule')}>
@@ -131,13 +131,13 @@ export default function Authenticated({ user, header, children }) {
                             Dashboard
                         </ResponsiveNavLink>
                         <ResponsiveNavLink href={route('chirps.index')} active={route().current('chirps.index')}>
-                            Billing
+                            Clinents
                         </ResponsiveNavLink>
                         <ResponsiveNavLink href={route('chirps.index')} active={route().current('chirps.index')}>
                             Caregivers
                         </ResponsiveNavLink>
                         <ResponsiveNavLink href={route('chirps.index')} active={route().current('chirps.index')}>
-                            Clinents
+                            Billing
                         </ResponsiveNavLink>
 
                         <ResponsiveNavLink href={route('chirps.index')} active={route().current('chirps.index')}>
