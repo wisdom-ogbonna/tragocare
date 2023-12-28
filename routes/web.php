@@ -5,7 +5,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\ChirpController;
-use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ClientsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,14 +40,19 @@ Route::resource('chirps', ChirpController::class)
     ->only(['index', 'store', 'update','destroy'])
     ->middleware(['auth', 'verified']);
 
+Route::resource('clients', ClientsController::class)
+    ->only(['index', 'store', 'update','destroy'])
+    ->middleware(['auth', 'verified']);
+
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/clients', [ClientController::class, 'index'])->name('clients.index');
-Route::get('/clients/create', [ClientController::class, 'create'])->name('clients.create');
-Route::post('/clients', [ClientController::class, 'store'])->name('clients.store');
+
+
 
 require __DIR__.'/auth.php';

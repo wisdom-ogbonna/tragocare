@@ -24,13 +24,13 @@ export default function Authenticated({ user, header, children }) {
                                 <NavLink href={route('dashboard')} active={route().current('dashboard')}>
                                     Dashboard
                                 </NavLink>
-
                                 <NavLink href={route('chirps.index')} active={route().current('chirps.index')}>
-                                    Clients
-                                </NavLink>
-                                <NavLink href="chirps.index" active={route().current('/caregivers')}>
                                     Caregivers
                                 </NavLink>
+                                <NavLink href={route('clients.index')} active={route().current('clients.index')}>
+                                Clients
+                                </NavLink>
+
 
                                 <NavLink href="/clients" active={route().current('/clients')}>
                                     Billing
